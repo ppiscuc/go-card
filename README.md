@@ -43,7 +43,7 @@ Usage
     defer card.Disconnect()
 
     fmt.Printf("Card ATR: %s\n", card.ATR()) 
-    command := SelectCommand(0xa0, 0x00, 0x00, 0x00, 0x62, 0x03, 0x01, 0xc, 0x01, 0x01)
+    command := SelectByNameCommand(0xa0, 0x00, 0x00, 0x00, 0x62, 0x03, 0x01, 0xc, 0x01, 0x01)
     response, err := card.TransmitAPDU(command)
     // handle error, if any
     fmt.Printf("Response: %s\n", response)

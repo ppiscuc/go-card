@@ -91,7 +91,7 @@ func TestCardCommunication(t *testing.T) {
 
     fmt.Println("Select applet")
     fmt.Printf("-------------\n\n")
-    cmd := SelectCommand(0x90, 0x72, 0x5A, 0x9E, 0x3B, 0x10, 0x70, 0xAA)
+    cmd := SelectByNameCommand(0x90, 0x72, 0x5A, 0x9E, 0x3B, 0x10, 0x70, 0xAA)
     fmt.Printf(">> %s\n", cmd)
     response, err := card.TransmitAPDU(cmd)
     if err != nil { t.Error(err); return }
